@@ -11,6 +11,7 @@ using namespace std;
 
 void ex02();
 
+///common
 
 int main()
 {
