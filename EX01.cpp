@@ -60,22 +60,25 @@ void ex03()
 	cout << "\n The diagonal of the square is " << diag << " units long\n";
 
 	//part b
-	/*char yn;
+	char yn;
+	//int yn;
 	cout << "please enter y or n\n";
-	cin >> "yn";
+	cin >> yn;
 
 	if (yn == 'y')
 		cout << "yes\n";
 	else if (yn == 'n')
 		cout << "no\n";
 	else
+		{
 		cout << "thats wrong :(\n";
-
+		};
+		
 
 	//part c
 	//char tab;
 	//tab = '\t';
-	*/
+	
 
 	string mailingAddress;
 	cout << "please enter your mailing address\n";
