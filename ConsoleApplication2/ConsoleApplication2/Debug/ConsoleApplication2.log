@@ -1,5 +1,5 @@
 ﻿  EX01.cpp
 \\cs1\2018\sjohnstone18\cs172-2\repos\ex01.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-\\cs1\2018\sjohnstone18\cs172-2\repos\ex01.cpp(77): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+\\cs1\2018\sjohnstone18\cs172-2\repos\ex01.cpp(92): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   ConsoleApplication2.vcxproj -> \\cs1\2018\sjohnstone18\CS172-2\Repos\ConsoleApplication2\Debug\ConsoleApplication2.exe
   ConsoleApplication2.vcxproj -> \\cs1\2018\sjohnstone18\CS172-2\Repos\ConsoleApplication2\Debug\ConsoleApplication2.pdb (Full PDB)
