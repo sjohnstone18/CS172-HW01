@@ -23,9 +23,11 @@ int passby(int &x);
 
 int main()
 {
-	ex02();
-	ex03();
+	srand(time(NULL));
+//	ex02();
+//	ex03();
 	ex04();
+	ex05();
 	return 0;
 }
 
@@ -39,7 +41,7 @@ void ex02()
 	bool hasPassedTest = true;
 
 	//part 1b
-	srand(time(NULL));
+	
 	int x = rand();
 	int y = rand();
 	if (x >= y)
@@ -162,17 +164,17 @@ void ex04()
 	separate(num);
 
 	//part 3f
-	srand(time(NULL));
+	
 	int xx = rand();
 	int yy = rand();
-	adder(xx, yy);
-	cout << "the sum of 2 randos is "<< adder;
 
-	//part 3e
+	int adderVal = adder(xx, yy);
+	cout << "the sum of 2 random numbers is " << adderVal << endl;
+
+	//part 3g
 	int integerVal = 0;
 	passby(integerVal);
-	cout << integerVal;
-
+	cout << integerVal<< endl;
 	
 
 }
@@ -182,7 +184,15 @@ void ex04()
 void ex05()
 {
 	
-
+	//part 4
+	int array1[5];
+	int numero;
+	for (int counter = 1; counter < 6; counter++)
+	{
+		cout << "please enter value " << counter << endl;
+		cin >> numero;
+		array1[counter] = numero;
+	}
 
 }
 
@@ -191,7 +201,7 @@ int separate(int doble)
 {
 	//penis
 	doble = doble * 2;
-	cout << doble;
+	cout << doble << endl;
 	return doble;
 }
 
@@ -206,5 +216,5 @@ int adder(int rand1, int rand2)
 int passby(int &x)
 {
 	x = x + 1;
-	
+	return 0;
 }
