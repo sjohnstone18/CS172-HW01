@@ -15,6 +15,10 @@ void ex02();
 void ex03();
 void ex04();
 void ex05();
+int separate(int doble);
+int adder(int rand1, int rand2);
+int passby(int &x);
+
 ///common
 
 int main()
@@ -124,7 +128,7 @@ void ex03()
 void ex04()
 {
 	//part3a
-	int num;
+	int num; //special number
 	do 
 	{
 		cout << "please enter a number between 1 and 10\n";
@@ -147,6 +151,29 @@ void ex04()
 		cout << "*";
 			cont++;
 	} while (cont < num);
+	cout << endl;
+
+	//part 3d
+	for (int c0unt = 0; c0unt <= 40; c0unt = c0unt + 2)
+		cout << c0unt << endl;
+
+	//part 3e
+	cout << "2 times " << num << " is ";
+	separate(num);
+
+	//part 3f
+	srand(time(NULL));
+	int xx = rand();
+	int yy = rand();
+	adder(xx, yy);
+	cout << "the sum of 2 randos is "<< adder;
+
+	//part 3e
+	int integerVal = 0;
+	passby(integerVal);
+	cout << integerVal;
+
+	
 
 }
 
@@ -154,6 +181,30 @@ void ex04()
 
 void ex05()
 {
+	
 
 
+}
+
+
+int separate(int doble)
+{
+	//penis
+	doble = doble * 2;
+	cout << doble;
+	return doble;
+}
+
+int adder(int rand1, int rand2)
+{
+	int summer = rand1 + rand2;
+
+
+	return summer;
+}
+
+int passby(int &x)
+{
+	x = x + 1;
+	
 }
