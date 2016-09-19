@@ -2,12 +2,13 @@
 //
 
 //#include "stdafx.h"
-#include "stdbool.h"
-#include "stdlib.h"
-#include "ctime"
-#include "iostream"
-#include "string"
-#include "math.h"
+//#include <stdbool.h>
+#include <stdlib.h>
+#include <ctime>
+#include <iostream>
+#include <string>
+#include <math.h>
+
 using namespace std;
 
 
@@ -18,14 +19,16 @@ void ex05();
 int separate(int doble);
 int adder(int rand1, int rand2);
 int passby(int &x);
+void size1(int arrayNum[], int arraySize);
+void size2(int arrayNum[], int arraySize);
 
 ///common
 
 int main()
 {
 	srand(time(NULL));
-//	ex02();
-//	ex03();
+	ex02();
+	ex03();
 	ex04();
 	ex05();
 	return 0;
@@ -184,22 +187,44 @@ void ex04()
 void ex05()
 {
 	
-	//part 4
+	//part 4a
 	int array1[5];
 	int numero;
-	for (int counter = 1; counter < 6; counter++)
+	for (int counter = 0; counter < 5; counter++)
 	{
-		cout << "please enter value " << counter << endl;
+		cout << "please enter value " << counter+1 << endl;
 		cin >> numero;
 		array1[counter] = numero;
 	}
 
+	//part4b
+	int sum = 0;
+	for (int counter = 0; counter < 5; counter++)
+	{
+		
+		sum = sum + array1[counter];
+		
+	}
+	cout << "the sum of those numbers is " << sum << endl;
+
+	int product = 1;
+	for (int counter = 0; counter < 5; counter++)
+	{
+
+		product= product * array1[counter];
+
+	}
+	cout << "the product of those numbers is " << product << endl;
+	//part 4c
+	size1(array1, sizeof(array1)/sizeof(int));
+	//part 4d
+	size2(array1, sizeof(array1) / sizeof(int));
 }
 
 
 int separate(int doble)
 {
-	//penis
+	//for part 3e
 	doble = doble * 2;
 	cout << doble << endl;
 	return doble;
@@ -207,6 +232,7 @@ int separate(int doble)
 
 int adder(int rand1, int rand2)
 {
+	//for part 3f
 	int summer = rand1 + rand2;
 
 
@@ -215,6 +241,39 @@ int adder(int rand1, int rand2)
 
 int passby(int &x)
 {
+	//for part 3g
 	x = x + 1;
 	return 0;
+}
+
+
+void size1(int arrayNum[], int arraySize)
+{
+	//for part 4c
+	for (int counter = 0; counter < arraySize; counter++)
+	{
+		cout << arrayNum[counter] << endl;
+		
+	}
+	
+}
+
+void size2(int arrayNum[], int arraySize)
+{
+	//for part 4d
+	int arrayContains = 0;
+	int query;
+	cout << "please enter a number to check for in the array\n";
+	cin >> query;
+	for (int counter = 0; counter < 5; counter++)
+	{
+		if (arrayNum[counter] == query)
+			arrayContains = 1;
+	}
+	if (arrayContains == 1)
+		cout<< "The array contains your number\n";
+	else
+		cout << "The array does not contain your number\n";
+
+
 }
